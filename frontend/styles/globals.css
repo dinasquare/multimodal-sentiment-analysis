@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.bg-gradient {
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(var(--background-end-rgb))
+  )
+  rgb(var(--background-start-rgb));
+}
+
+.sentiment-badge {
+  @apply rounded-full px-3 py-1.5 text-sm font-medium;
+}
+
+.sentiment-positive {
+  @apply bg-green-100 text-green-800;
+}
+
+.sentiment-neutral {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.sentiment-negative {
+  @apply bg-red-100 text-red-800;
+}
+
+.card {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden;
+}
+
+.card-header {
+  @apply px-6 py-4 border-b border-gray-200 dark:border-gray-700;
+}
+
+.card-body {
+  @apply px-6 py-4;
+}
+
+.card-footer {
+  @apply px-6 py-4 border-t border-gray-200 dark:border-gray-700;
+} 
